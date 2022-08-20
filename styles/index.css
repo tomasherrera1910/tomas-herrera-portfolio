@@ -1,0 +1,233 @@
+:root {
+    --bg-color: #eee;
+    --bg-secondary-color: #aaa;
+    --text-color: #111;
+    --text-gradient: #444;
+    --navbar-bg: rgba(0, 0, 0, 0.8);
+    --blue-color: rgb(55, 55, 219);
+    --blue-shadow: 1px 1px 8px rgb(55, 55, 219);
+    --bg-button-theme: url("../img/background-space.jpg");
+    --dark-mode: 0;
+    --light-mode: unset;
+    --box-small-shadow: 0px 6px 15px -4px #000;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    margin:0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: ease-in-out 0.5s;
+    overflow-x: hidden;
+}
+input, a, textarea, button{
+    font-family: inherit;
+}
+textarea{
+    resize: none;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.title{
+  font-size: 3rem;
+  margin: 8px 0;
+  background: -webkit-linear-gradient(var(--text-color), var(--text-gradient));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle{
+  font-size: 2rem;
+  margin:0 0 8px 0;
+  background: -webkit-linear-gradient(rgb(7, 7, 87), rgb(55, 55, 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contactView, .projectsView, .skillsView, .homeContainer{
+    padding-top: 4.5em;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactView{
+    padding-bottom: 4em;
+}
+.homeContainer{
+    flex-direction: row;
+    gap:2em;
+}
+.homeContainer img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 9999px;
+    box-shadow: var(--box-small-shadow);
+}
+.socialsButtonsContainer{
+    display:flex;
+    gap: 1em;
+}
+.socialsButtonsContainer a{
+    text-decoration:none;
+    color: var(--text-col);
+}
+.socialsButtonsContainer a{
+    padding: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--text-col);
+    border: 1px solid var(--text-color);
+    outline:none;
+}
+.socialsButtonsContainer a:hover{
+    transition: ease-in-out 0.3s;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    box-shadow: 0px 1px 6px 0 var(--text-color);
+}
+.aboutMe{
+    max-width: 400px;
+    font-size: 1rem;
+    margin:8px 0;
+}
+
+.contactContainer{
+    margin-top: 2em;
+    box-shadow: var(--box-small-shadow);
+    text-align: center;
+    border-radius: 1em;
+    width: 600px;
+    max-width: 85%;
+    padding: 1em 2.5em;
+}
+.contactContainer form section{
+    display: flex;
+    gap:1em;
+}
+.contactContainer input, .contactContainer textarea{
+    display: block;
+    width:100%;
+    margin-bottom: 1em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border:none;
+    border-bottom: 1.5px solid var(--text-color);
+    outline:none;
+    padding: 0.5em 0.2em;
+    transition: ease-in-out .5s;
+}
+.contactContainer textarea{
+    min-height: 100px;
+}
+.contactContainer input:focus, .contactContainer textarea:focus{
+    transition: ease-in-out .3s;
+    border-bottom: 1.5px solid var(--blue-color);
+}
+.contactContainer button{
+    padding: 0;
+    width:100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+.contactContainer button:hover{
+    transition: ease-in-out .3s;
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.swiper {
+    width: 100vw;
+    max-width: 850px;
+    height: 300px;
+    box-shadow: var(--box-small-shadow);
+  }
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    --swiper-navigation-size: 20px;
+    color: #fff;
+}
+.swiper .swiper-pagination{
+    --swiper-pagination-color: #fff;
+    --swiper-pagination-bullet-inactive-color: #bbb;
+}
+@media(max-width: 805px){
+    .title{
+        font-size: 2.5rem;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+    }
+    .aboutMe{
+        margin: 4px 0 4px 0;
+        font-size: 14px;
+    }
+    .socialsButtonsContainer a{
+        font-size: 1rem;
+    }
+    .homeContainer img{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media(max-width: 550px){
+    .contactContainer form section{
+        flex-direction: column;
+        gap:0;
+    }
+    .homeContainer{
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .homeContainer img{
+        width: 200px;
+        height: 200px;
+    }
+    .title{
+        font-size: 2rem;
+        margin: 0 0 4px 0;
+        text-align: center;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+        margin: 0 0 4px 0;
+        text-align: center;
+    }
+    .aboutMe{
+        margin: 4px 0 4px 0;
+        font-size: 12px;
+    }
+    .socialsButtonsContainer{
+        justify-content: center;
+    }
+    .socialsButtonsContainer a{
+        font-size: .75rem;
+    }
+    .swiper{
+        height:250px;
+    }
+}
+@media(max-width: 350px){
+    .homeContainer img{
+        width: 150px;
+        height: 150px;
+    }
+}

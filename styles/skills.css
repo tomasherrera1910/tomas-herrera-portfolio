@@ -1,0 +1,84 @@
+.skillsNavbar{
+    background-color: var(--bg-secondary-color);
+    margin-bottom: 1em;
+    transition: ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 2em;
+}
+.skillsNavbar button{
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    font-size:20px;
+    transition: ease-in-out 0.5s;
+    padding: 0.5em;
+    cursor:pointer;
+}
+.skillsNavbar button:hover:not(.skillsButtonActive){
+    opacity: 0.5;
+}
+.skillsNavbar button:not(.skillsButtonActive){
+    background-color: var(--bg-secondary-color);
+}
+.skillsButtonActive{
+    background-color: var(--bg-color);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+.skillsBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 95%;
+    max-width: 600px;
+    border-radius: 1em;
+    box-shadow: var(--box-small-shadow);
+}
+.skillsBox section{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 0.5em;
+}
+.skillsBox img{
+    width: 100px;
+    height: 100px;
+}
+.skillsDisplay img{
+    display:block;
+}
+.skillsDisplay a:hover{
+    transition: ease-in-out .3s;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+.skillsNoDisplay img{
+    display:none;
+}
+
+@media(max-width: 805px){
+    .skillsBox img{
+        width: 75px;
+        height: 75px;
+    }
+}
+@media(max-width: 550px){
+    .skillsBox img{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media (max-width: 385px){
+    .skillsNavbar button{
+        font-size:16px;
+    }
+    .skillsBox img{
+        width: 50px;
+        height: 50px;
+    }
+}
