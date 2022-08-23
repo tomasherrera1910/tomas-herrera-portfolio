@@ -78,11 +78,13 @@ textarea{
     display:flex;
     gap: 1em;
 }
-.socialsButtonsContainer a{
+.socialsButtonsContainer a,
+.socialsButtonsContainer button{
     text-decoration:none;
     color: var(--text-col);
 }
-.socialsButtonsContainer a{
+.socialsButtonsContainer a,
+.socialsButtonsContainer button{
     padding: 0.5em;
     border-radius: 4px;
     cursor: pointer;
@@ -91,7 +93,8 @@ textarea{
     border: 1px solid var(--text-color);
     outline:none;
 }
-.socialsButtonsContainer a:hover{
+.socialsButtonsContainer a:hover,
+.socialsButtonsContainer button:hover{
     transition: ease-in-out 0.3s;
     background-color: var(--text-color);
     color: var(--bg-color);
