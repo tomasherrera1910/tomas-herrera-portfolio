@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <!-- index.js -->
     <script src="index.js" defer></script>
+    <script src="projects.js" defer></script>
     <title>Portafolio Herrera</title>
 </head>
 <body id="body" onload="changeTheme(true)">
@@ -55,9 +56,8 @@
                     <!-- <button>Gmail</button>-->
                 </div>
                 <p class="aboutMe">
-                    Soy un estudiante de la Tecnicatura Superior en Programación en la <a href="http://www1.frm.utn.edu.ar/tsprogramacion/" target="_blank">UTN Mendoza</a> desde 2019,
-                    (solo me faltan las Prácticas Profesionalizantes para recibirme),
-                    en estos tres años programando creo que he aprendido mucho y ya estoy listo para dar el salto laboral.
+                    Estudiante de la Tecnicatura Superior en Programación en la <a href="http://www1.frm.utn.edu.ar/tsprogramacion/" target="_blank">UTN Mendoza</a> (solo me faltan las Prácticas Profesionalizantes para recibirme),
+                    llevo tres años programando y ya estoy listo para dar el salto laboral.
                 </p>
             </div>
         </section>    
@@ -108,10 +108,9 @@
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <!-- EL BUEN SABOR -->
+                    <!-- EL BUEN SABOR PROYECTO FINAL UTN     -->
                         <article class="flipContainer swiper-slide">
-                            <div class="backgroundCard" style="--bg-img: url(../img/ElBuenSaborHome.png)">
+                            <div class="backgroundCard" style="--bg-img: url(../img/projects/ElBuenSaborHome.png)">
                                 <section class="frontCard">
                                     <h1>PROYECTO FINAL UTN (Tecnicatura Superior en Programación)</h1>
                                 </section>
@@ -129,9 +128,43 @@
                                 </section>
                             </div>
                         </article>
-                        <!-- EJERCICIOS ADVENTJS -->
+                    <!-- MOVIES REACT CSS -->
                         <article class="flipContainer swiper-slide">
-                            <div class="backgroundCard" style="--bg-img: url(../img/adventjsExercise.png)">
+                            <div class="backgroundCard" style="--bg-img: url(../img/projects/moviesReactCss.png)">
+                                <section class="frontCard">
+                                    <h1>Movies Page (prueba técnica)</h1>
+                                </section>
+                                <section class="reverseCard" style="--prim-col:rgb(55, 116, 208); --sec-col:rgb(3, 82, 106); --text-col:#faebd7;">
+                                    <p>Pagina web en la que podes buscar todas tus películas favoritas, desarrollada con React y Css</p>
+                                    <a href="https://github.com/tomasherrera1910/movies_homepage" target="_blank">
+                                        Github <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://lovely-moonbeam-3fa776.netlify.app/" target="_blank">
+                                        Visitar Sitio <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </section>
+                            </div>
+                        </article>
+                    <!-- WEATHERAPP NEXTJS -->
+                        <article class="flipContainer swiper-slide">
+                            <div class="backgroundCard" style="--bg-img: url(../img/projects/weatherAppNext.png)">
+                                <section class="frontCard">
+                                    <h1>Clima Argentina</h1>
+                                </section>
+                                <section class="reverseCard" style="--prim-col:rgb(26, 16, 119); --sec-col:rgb(17, 10, 66); --text-col:#faebd7;">
+                                    <p>Página del clima, probando Nextjs, y testing (Jest, react-testing-library, Cypress)</p>
+                                    <a href="https://github.com/tomasherrera1910/weatherapp-nextjs" target="_blank">
+                                        Github <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://weatherapp-nextjs.vercel.app/" target="_blank">
+                                        Visitar Sitio <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </section>
+                            </div>
+                        </article>
+                    <!-- EJERCICIOS ADVENTJS -->
+                        <article class="flipContainer swiper-slide">
+                            <div class="backgroundCard" style="--bg-img: url(../img/projects/adventjsExercise.png)">
                                 <section class="frontCard">
                                     <h1>SOLUCIÓN 25 RETOS CON JAVASCRIPT</h1>
                                 </section>
@@ -146,9 +179,9 @@
                                 </section>
                             </div>
                         </article>
-                        <!-- MI PRIMER PROYECTO REACT (con api de rick y morty) -->
+                    <!-- MI PRIMER PROYECTO REACT (con api de rick y morty) -->
                         <article class="flipContainer swiper-slide">
-                            <div class="backgroundCard" style="--bg-img: url(../img/rickMortyReact.png)">
+                            <div class="backgroundCard" style="--bg-img: url(../img/projects/rickMortyReact.png)">
                                 <section class="frontCard">
                                     <h1>RICK Y MORTY</h1>
                                 </section>
@@ -163,9 +196,9 @@
                                     <a href="https://rickandmortyapi.com/api/character" target="_blank">
                                         API <i class="fa-solid fa-paperclip"></i>
                                     </a>
-                                </section>
-                            </div>
-                        </article>
+                                </section> 
+                                </div>
+                            </article>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -193,5 +226,6 @@
             </div>
         </section>
     </div>
+    
 </body>
 </html>
