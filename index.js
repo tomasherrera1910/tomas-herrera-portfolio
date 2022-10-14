@@ -108,7 +108,7 @@ function navigateHandler(active) {
 function setImgUtnProject() {
   const viewWidth = window.innerWidth
   const imageElement = document.getElementById("utn-project")
-  if (viewWidth > 425)
+  if (viewWidth >= 500)
     imageElement.setAttribute("src", "../img/projects/ElBuenSaborFactura.png")
 }
 setImgUtnProject()
