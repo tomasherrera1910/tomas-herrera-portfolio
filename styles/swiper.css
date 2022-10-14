@@ -1,0 +1,18 @@
+.swiper {
+    width: 100vw;
+    max-width: 850px;
+    height: 80vh;
+    max-height: 350px;
+  }
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    --swiper-navigation-size: 40px;
+    font-weight: 900;
+    color: var(--text-color);
+    text-shadow: 2px 0 var(--bg-color), -2px 0 var(--bg-color), 0 2px var(--bg-color), 0 -2px var(--bg-color),
+             1px 1px var(--bg-color), -1px -1px var(--bg-color), 1px -1px var(--bg-color), -1px 1px var(--bg-color);
+}
+.swiper .swiper-pagination{
+    --swiper-pagination-color: var(--text-color);
+    --swiper-pagination-bullet-inactive-color: var(--text-color);
+}

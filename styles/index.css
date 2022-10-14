@@ -157,21 +157,7 @@ textarea{
     border: 1px solid var(--text-color);
 }
 
-.swiper {
-    width: 100vw;
-    max-width: 850px;
-    height: 300px;
-    box-shadow: var(--box-small-shadow);
-  }
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next{
-    --swiper-navigation-size: 20px;
-    color: #fff;
-}
-.swiper .swiper-pagination{
-    --swiper-pagination-color: #fff;
-    --swiper-pagination-bullet-inactive-color: #bbb;
-}
+
 @media(max-width: 805px){
     .title{
         font-size: 2.5rem;
@@ -223,9 +209,6 @@ textarea{
     }
     .socialsButtonsContainer a{
         font-size: .75rem;
-    }
-    .swiper{
-        height:250px;
     }
 }
 @media(max-width: 350px){
