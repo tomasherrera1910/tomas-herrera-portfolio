@@ -1,246 +1,532 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/logo.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" />
     <!-- mis hojas de estilos -->
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/proyectos.css">
-    <link rel="stylesheet" href="styles/skills.css">
-    <link rel="stylesheet" href="styles/swiper.css">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/proyectos.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/swiper.css" />
     <!-- iconos font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Oswald font (google fonts cdn) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CDN SWIPERJS Estilos y Js-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
     <!-- index.js -->
     <script src="index.js" defer></script>
     <title>Portafolio Herrera</title>
-</head>
-<body id="body" onload="changeTheme(true)">
+  </head>
+  <body id="body" onload="changeTheme(true)">
     <header class="navbar mainNavbar">
-        <div class="headerContent">
-            <button onclick="changeTheme(false)" class="switchTheme">
-                <span><i class="fa-solid fa-moon"></i></span>
-                <span><i class="fa-solid fa-sun sun"></i></span>
-            </button>
-            <nav>
-                <button class="toggleButton" onclick="toggleHandler()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <ul class="navbarList">
-                    <li class="active" id="inicioLink"><a href="#inicio" onclick="navigateHandler('inicioLink')">INICIO</a></li>
-                    <li id="skillsLink"><a href="#skills" onclick="navigateHandler('skillsLink')">HABILIDADES</a></li>
-                    <li id="proyectosLink"><a href="#proyectos" onclick="navigateHandler('proyectosLink')">PROYECTOS</a></li>
-                    <li id="contactoLink"><a href="#contacto" onclick="navigateHandler('contactoLink')">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="headerContent">
+        <button onclick="changeTheme(false)" class="switchTheme">
+          <span><i class="fa-solid fa-moon"></i></span>
+          <span><i class="fa-solid fa-sun sun"></i></span>
+        </button>
+        <nav>
+          <button class="toggleButton" onclick="toggleHandler()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="navbarList">
+            <li class="active" id="inicioLink">
+              <a href="#inicio" onclick="navigateHandler('inicioLink')"
+                >INICIO</a
+              >
+            </li>
+            <li id="skillsLink">
+              <a href="#skills" onclick="navigateHandler('skillsLink')"
+                >HABILIDADES</a
+              >
+            </li>
+            <li id="proyectosLink">
+              <a href="#proyectos" onclick="navigateHandler('proyectosLink')"
+                >PROYECTOS</a
+              >
+            </li>
+            <li id="contactoLink">
+              <a href="#contacto" onclick="navigateHandler('contactoLink')"
+                >CONTACTO</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <div class="container">
-        <section class="homeContainer" id="inicio">
-            <img src="img/foto-dia.jpg" alt="Mi imagen" id="foto"/>
+      <section class="homeContainer" id="inicio">
+        <img src="img/foto-dia.jpg" alt="Mi imagen" id="foto" />
+        <div>
+          <h1 class="title">¡Hola, soy Tomás Herrera!</h1>
+          <h2 class="subtitle">Programador Fullstack Jr.</h2>
+          <div class="socialsButtonsContainer">
+            <a href="https://github.com/tomasherrera1910" target="_blank"
+              >Github <i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/tomas-herrera-8a1988247/"
+              target="_blank"
+              >LinkedIn <i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              download="Curriculum Herrera"
+              href="./files/Curriculum Tomás Herrera 11-10-2022.pdf"
+              >Descargar CV <i class="fa-solid fa-file-pdf"></i
+            ></a>
+            <!-- <button>Gmail</button>-->
+          </div>
+          <p class="aboutMe">
+            Estudiante de la Tecnicatura Superior en Programación en la
+            <a href="http://www1.frm.utn.edu.ar/tsprogramacion/" target="_blank"
+              >UTN Mendoza</a
+            >
+            (solo me faltan las Prácticas Profesionalizantes para recibirme),
+            llevo tres años programando y ya estoy listo para dar el salto
+            laboral.
+          </p>
+        </div>
+      </section>
+      <!-- SECCIÓN SKILLS -->
+      <section id="skills" class="skillsView">
+        <h1 class="title">Habilidades</h1>
+        <div class="skillsBox">
+          <header class="skillsNavbar">
+            <nav>
+              <button
+                class="skillsButtonActive"
+                onclick="navbarSkills('esp')"
+                id="esp"
+              >
+                Especialidades
+              </button>
+              <button onclick="navbarSkills('apr')" id="apr">
+                Nivel medio y mejorando
+              </button>
+              <button onclick="navbarSkills('pen')" id="pen">
+                Conocimiento Básico
+              </button>
+            </nav>
+          </header>
+          <section class="skillsDisplay" id="skills1">
             <div>
-                <h1 class="title">¡Hola, soy Tomás Herrera!</h1>
-                <h2 class="subtitle">Programador Fullstack Jr.</h2>
-                <div class="socialsButtonsContainer">
-                    <a href="https://github.com/tomasherrera1910" target="_blank">Github <i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/tomas-herrera-8a1988247/" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-                    <a download="Curriculum Herrera" href="./files/Curriculum Tomás Herrera 11-10-2022.pdf">Descargar CV <i class="fa-solid fa-file-pdf"></i></a>
-                    <!-- <button>Gmail</button>-->
-                </div>
-                <p class="aboutMe">
-                    Estudiante de la Tecnicatura Superior en Programación en la <a href="http://www1.frm.utn.edu.ar/tsprogramacion/" target="_blank">UTN Mendoza</a> (solo me faltan las Prácticas Profesionalizantes para recibirme),
-                    llevo tres años programando y ya estoy listo para dar el salto laboral.
+              <h3>Desarrollo Web</h3>
+              <section>
+                <a
+                  href="https://developer.mozilla.org/es/docs/Web/HTML"
+                  target="_blank"
+                  ><img src="/img/icons/html-5.svg" /><span>HTML</span></a
+                >
+                <a
+                  href="https://developer.mozilla.org/es/docs/Web/CSS"
+                  target="_blank"
+                  ><img src="/img/icons/css-3.svg" /><span>CSS</span></a
+                >
+                <a href="https://www.javascript.com/" target="_blank"
+                  ><img src="/img/icons/javascript.svg" /><span
+                    >Javascript</span
+                  ></a
+                >
+              </section>
+            </div>
+
+            <div>
+              <h3>Stack MERN</h3>
+              <section>
+                <a href="https://www.mongodb.com/" target="_blank"
+                  ><img src="/img/icons/mongodb-icon.svg" /><span
+                    >MongoDB</span
+                  ></a
+                >
+                <a href="https://expressjs.com/es/" target="_blank"
+                  ><img src="/img/icons/expressjs.svg" />
+                  <span>Express</span></a
+                >
+                <a href="https://es.reactjs.org/" target="_blank"
+                  ><img src="/img/icons/react.svg" /> <span>React.js</span></a
+                >
+                <a href="https://nodejs.org/en/" target="_blank"
+                  ><img src="/img/icons/nodejs-icon.svg" /><span
+                    >Node.js</span
+                  ></a
+                >
+              </section>
+            </div>
+          </section>
+          <section class="skillsNoDisplay" id="skills2">
+            <!-- Nivel Medio -->
+
+            <div>
+              <h3>Usando y aprendiendo constantemente</h3>
+              <section>
+                <a href="https://www.typescriptlang.org/" target="_blank"
+                  ><img src="/img/icons/typescript-icon.svg" /><span
+                    >Typescript</span
+                  ></a
+                >
+                <a href="https://nextjs.org/" target="_blank"
+                  ><img src="/img/icons/nextjs-icon.svg" /><span
+                    >Next.js</span
+                  ></a
+                >
+              </section>
+            </div>
+
+            <div>
+              <h3>Testing</h3>
+              <section>
+                <a href="https://jestjs.io/" target="_blank"
+                  ><img src="/img/icons/jest.svg" /><span>Jest</span></a
+                >
+                <a href="https://testing-library.com/" target="_blank"
+                  ><img src="/img/icons/testing-library.svg" /><span
+                    >React Testing Library</span
+                  ></a
+                >
+                <a href="https://cypress.io/" target="_blank"
+                  ><img src="/img/icons/cypress-icon.svg" /><span
+                    >Cypress</span
+                  ></a
+                >
+              </section>
+            </div>
+
+            <div>
+              <h3>Base de datos y ORM</h3>
+              <section>
+                <a href="https://www.mysql.com/" target="_blank"
+                  ><img src="/img/icons/mysql-icon.svg" />MySQL</a
+                >
+                <a href="https://sequelize.org/" target="_blank"
+                  ><img src="/img/icons/sequelize.svg" />Sequelize</a
+                >
+              </section>
+            </div>
+
+            <div>
+              <h3>Inglés</h3>
+              <section>
+                <p>
+                  Intento dedicar tiempo a aprenderlo y perfeccionarlo lo máximo
+                  posible
                 </p>
+              </section>
             </div>
-        </section>    
-        <!-- SECCIÓN SKILLS -->
-        <section id="skills" class="skillsView">
-            <h1 class="title">Habilidades</h1>
-            <div class="skillsBox">
-                <header class="skillsNavbar">
-                    <nav>
-                        <button class="skillsButtonActive" onclick="navbarSkills('esp')" id="esp">Especialidades</button>
-                        <button onclick="navbarSkills('apr')" id="apr">Nivel medio</button>
-                        <button onclick="navbarSkills('pen')" id="pen">Aprendiendo</button>
-                    </nav>
-                </header>
-                <section class="skillsDisplay" id="skills1">
-                    <a href="https://es.reactjs.org/" target="_blank"><img src="/img/icons/react.svg"/></a>
-                    <a href="https://nodejs.org/en/" target="_blank"><img src="/img/icons/nodejs-icon.svg"/></a>
-                    <a href="https://www.javascript.com/" target="_blank"><img src="/img/icons/javascript.svg"/></a>
-                    <a href="https://www.mongodb.com/" target="_blank"><img src="/img/icons/mongodb-icon.svg"/></a>
-                    <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"><img src="/img/icons/css-3.svg"/></a>
-                    <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank"><img src="/img/icons/html-5.svg"/></a>
-                </section>
-                <section class="skillsNoDisplay" id="skills2">
-                    <!-- Nivel Medio -->
-                    <a href="https://www.typescriptlang.org/" target="_blank"><img src="/img/icons/typescript-icon.svg"/></a>
-                    <a href="https://www.mysql.com/" target="_blank"><img src="/img/icons/mysql-icon.svg"/></a>
-                    <a href="https://sequelize.org/" target="_blank"><img src="/img/icons/sequelize.svg"/></a>
-                    <a href="https://vuejs.org/" target="_blank"><img src="/img/icons/vue.svg"/></a>
-                    <a href="https://vuetifyjs.com/en/" target="_blank"><img src="/img/icons/vuetifyjs.svg"/></a>
-                    <a href="https://angular.io/" target="_blank"><img src="/img/icons/angular-icon.svg"/></a>
-                    <a href="https://www.java.com/es/" target="_blank"><img src="/img/icons/java.svg"/></a>
-                    <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank"><img src="/img/icons/c-sharp.svg"/></a>
-                </section>
-                <section class="skillsNoDisplay" id="skills3">
-                    <!-- Pendientes -->
-                    <a href="https://www.typescriptlang.org/" target="_blank"><img src="/img/icons/typescript-icon.svg"/></a>
-                    <a href="https://nextjs.org/" target="_blank"><img src="/img/icons/nextjs-icon.svg"/></a>
-                    <a href="https://jestjs.io/" target="_blank"><img src="/img/icons/jest.svg"/></a>
-                </section>    
+          </section>
+          <section class="skillsNoDisplay" id="skills3">
+            <!-- Básico -->
+
+            <div>
+              <h3>Frameworks JS</h3>
+              <section>
+                <a href="https://vuejs.org/" target="_blank"
+                  ><img src="/img/icons/vue.svg" /><span>Vue.js</span></a
+                >
+                <a href="https://angular.io/" target="_blank"
+                  ><img src="/img/icons/angular-icon.svg" /><span
+                    >Angular</span
+                  ></a
+                >
+              </section>
             </div>
-        </section>
-        <!-- SECCIÓN PROYECTOS -->
-        <section id="proyectos" class="projectsView">
-            <h1 class="title">Mis Proyectos</h1>
-            <div class="proyectosContainer">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                    <!-- EL BUEN SABOR PROYECTO FINAL UTN     -->
-                        <article class="flipContainer swiper-slide">
-                            <div class="proyectCard" style="--prim-col:rgba(208,55,55,1); --sec-col:rgba(106,3,3,1); --text-col:#faebd7;">
-                            <section class="frontCard">
-                                <img src="../img/projects/ElBuenSaborHome.png" alt="UTN PROYECTO" id="utn-project">
-                                <section>
-                                    <h3>PROYECTO FINAL UTN</h3>
-                                </section>
-                            </section>
-                            <section class="reverseCard">
-                                <p>Pagina web para un Restaurante, desarrollada en React y Nodejs.</p>
-                                <a href="https://github.com/tomasherrera1910/elbuensabor-frontend-prueba" target="_blank">
-                                    Frontend <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://github.com/tomasherrera1910/elbuensabor-backend" target="_blank">
-                                    Backend <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://elbuensabor-herrera.netlify.app/" target="_blank">
-                                    Visitar Sitio <i class="fa-solid fa-link"></i>
-                                </a>
-                            </section>
-                            </div>
-                        </article>
-                        <!-- MOVIES REACT CSS -->
-                        <article class="flipContainer swiper-slide">
-                            <div class="proyectCard" style="--prim-col:rgb(55, 116, 208); --sec-col:rgb(3, 82, 106); --text-col:#faebd7;">
-                            <section class="frontCard">
-                                <img src="../img/projects/moviesReactCss.png"/ alt="Movies Page">
-                                <section>
-                                    <h3>MOVIES PAGE (prueba técnica)</h3>
-                                </section>
-                            </section>
-                            <section class="reverseCard">
-                                <p>Pagina web en la que podes buscar todas tus películas favoritas, desarrollada con React y Css</p>
-                                <a href="https://github.com/tomasherrera1910/movies_homepage" target="_blank">
-                                    Github <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://lovely-moonbeam-3fa776.netlify.app/" target="_blank">
-                                    Visitar Sitio <i class="fa-solid fa-link"></i>
-                                </a>
-                            </section>
-                            </div>
-                        </article>
-                    <!-- WEATHERAPP NEXTJS -->
-                        <article class="flipContainer swiper-slide">
-                            <div class="proyectCard" style="--prim-col:rgb(26, 16, 119); --sec-col:rgb(17, 10, 66); --text-col:#faebd7;">
-                            <section class="frontCard">
-                                <img src="../img/projects/weatherAppNext.png"/ alt="Weather App">
-                                <section>
-                                    <h3>CLIMA ARGENTINA</h3>
-                                </section>
-                            </section>
-                            <section class="reverseCard">
-                                <p>Página del clima, probando Nextjs, y testing (Jest, react-testing-library, Cypress)</p>
-                                <a href="https://github.com/tomasherrera1910/weatherapp-nextjs" target="_blank">
-                                    Github <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://weatherapp-nextjs.vercel.app/" target="_blank">
-                                    Visitar Sitio <i class="fa-solid fa-link"></i>
-                                </a>
-                            </section>
-                            </div>
-                        </article>    
-                    <!-- EJERCICIOS ADVENTJS -->
-                        <article class="flipContainer swiper-slide">
-                            <div class="proyectCard" style="--prim-col:rgb(232,244,20); --sec-col:rgba(141,149,0,1); --text-col:rgb(52, 47, 47);">
-                            <section class="frontCard">
-                                <img src="../img/projects/adventjsExercise.png"/ alt="Adventjs exercise">
-                                <section>
-                                    <h3>SOLUCIÓN 25 RETOS CON JAVASCRIPT</h3>
-                                </section>
-                            </section>
-                            <section class="reverseCard">
-                                <p>Adventjs es una página de retos de JS propuesta por Midudev. Acá podes ver mi solución a todos los retos</p>
-                                <a href="https://github.com/tomasherrera1910/adventjs-retos" target="_blank">
-                                    Mi solución <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://adventjs.dev" target="_blank">
-                                    Visitar Sitio <i class="fa-solid fa-link"></i>
-                                </a>
-                            </section>
-                            </div>
-                        </article> 
-                    <!-- MI PRIMER PROYECTO REACT (con api de rick y morty) -->
-                        <article class="flipContainer swiper-slide">
-                            <div class="proyectCard" style="--prim-col:rgb(232,244,20); --sec-col:rgb(23, 104, 55); --text-col:rgb(52, 47, 47);">
-                            <section class="frontCard">
-                                <img src="../img/projects/rickMortyReact.png"/ alt="Rick y  Morty">
-                                <section>
-                                    <h3>RICK Y MORTY</h3>
-                                </section>
-                            </section>
-                            <section class="reverseCard">
-                                <p>Este fue mi primer proyecto en React en 2021, usando la API de Rick y Morty</p>
-                                <a href="https://github.com/tomasherrera1910/rickymorty-react" target="_blank">
-                                    Github <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://arcane-headland-94010.herokuapp.com/?page=1" target="_blank">
-                                    Visitar Sitio <i class="fa-solid fa-link"></i>
-                                </a>
-                                <a href="https://rickandmortyapi.com/api/character" target="_blank">
-                                    API <i class="fa-solid fa-paperclip"></i>
-                                </a>
-                            </section> 
-                            </div>
-                        </article> 
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+
+            <div>
+              <h3>Frameworks CSS & Material Design</h3>
+              <section>
+                <a href="https://getbootstrap.com/" target="_blank"
+                  ><img src="/img/icons/bootstrap.svg" /><span
+                    >Bootstrap</span
+                  ></a
+                >
+                <a href="https://vuetifyjs.com/en/" target="_blank"
+                  ><img src="/img/icons/vuetifyjs.svg" /><span>Vuetify</span></a
+                >
+              </section>
             </div>
-        </section>
-        <!-- SECCIÓN CONTACTO -->
-        <section id="contacto" class="contactView">
-            <div class="contactContainer">
-                <h1 class="title">Contáctame</h1>
-                <form action="https://formspree.io/f/meqdqkeq"
-                      method="POST">
+
+            <div>
+              <h3>Backend</h3>
+              <section>
+                <a href="https://www.java.com/es/" target="_blank"
+                  ><img src="/img/icons/java.svg" /><span>Java</span></a
+                >
+                <a
+                  href="https://docs.microsoft.com/en-us/dotnet/csharp/"
+                  target="_blank"
+                  ><img src="/img/icons/c-sharp.svg" /><span>C# .Net</span></a
+                >
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- SECCIÓN PROYECTOS -->
+      <section id="proyectos" class="projectsView">
+        <h1 class="title">Mis Proyectos</h1>
+        <div class="proyectosContainer">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- EL BUEN SABOR PROYECTO FINAL UTN     -->
+              <article class="flipContainer swiper-slide">
+                <div
+                  class="proyectCard"
+                  style="
+                    --prim-col: rgba(208, 55, 55, 1);
+                    --sec-col: rgba(106, 3, 3, 1);
+                    --text-col: #faebd7;
+                  "
+                >
+                  <section class="frontCard">
+                    <img
+                      src="../img/projects/ElBuenSaborHome.png"
+                      alt="UTN PROYECTO"
+                      id="utn-project"
+                    />
                     <section>
-                    <input placeholder="Nombre..." type="text" required name="nombre"/>
-                    <input placeholder="Mail de contacto..." type="email" required name="email"/>
+                      <h3>PROYECTO FINAL UTN</h3>
                     </section>
-                    <input placeholder="Asunto..." type="text" required name="asunto"/>
-                    <textarea placeholder="Mensaje..." required name="mensaje"></textarea>
-                    <button>Enviar <span><i class="fa-solid fa-paper-plane"></i></span></button>
-                </form>
+                  </section>
+                  <section class="reverseCard">
+                    <p>
+                      Pagina web para un Restaurante, desarrollada en React y
+                      Nodejs.
+                    </p>
+                    <a
+                      href="https://github.com/tomasherrera1910/elbuensabor-frontend-prueba"
+                      target="_blank"
+                    >
+                      Frontend <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://github.com/tomasherrera1910/elbuensabor-backend"
+                      target="_blank"
+                    >
+                      Backend <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://elbuensabor-herrera.netlify.app/"
+                      target="_blank"
+                    >
+                      Visitar Sitio <i class="fa-solid fa-link"></i>
+                    </a>
+                  </section>
+                </div>
+              </article>
+              <!-- MOVIES REACT CSS -->
+              <article class="flipContainer swiper-slide">
+                <div
+                  class="proyectCard"
+                  style="
+                    --prim-col: rgb(55, 116, 208);
+                    --sec-col: rgb(3, 82, 106);
+                    --text-col: #faebd7;
+                  "
+                >
+                  <section class="frontCard">
+                    <img src="../img/projects/moviesReactCss.png"/ alt="Movies
+                    Page">
+                    <section>
+                      <h3>MOVIES PAGE (prueba técnica)</h3>
+                    </section>
+                  </section>
+                  <section class="reverseCard">
+                    <p>
+                      Pagina web en la que podes buscar todas tus películas
+                      favoritas, desarrollada con React y Css
+                    </p>
+                    <a
+                      href="https://github.com/tomasherrera1910/movies_homepage"
+                      target="_blank"
+                    >
+                      Github <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://lovely-moonbeam-3fa776.netlify.app/"
+                      target="_blank"
+                    >
+                      Visitar Sitio <i class="fa-solid fa-link"></i>
+                    </a>
+                  </section>
+                </div>
+              </article>
+              <!-- WEATHERAPP NEXTJS -->
+              <article class="flipContainer swiper-slide">
+                <div
+                  class="proyectCard"
+                  style="
+                    --prim-col: rgb(26, 16, 119);
+                    --sec-col: rgb(17, 10, 66);
+                    --text-col: #faebd7;
+                  "
+                >
+                  <section class="frontCard">
+                    <img src="../img/projects/weatherAppNext.png"/ alt="Weather
+                    App">
+                    <section>
+                      <h3>CLIMA ARGENTINA</h3>
+                    </section>
+                  </section>
+                  <section class="reverseCard">
+                    <p>
+                      Página del clima, probando Nextjs, y testing (Jest,
+                      react-testing-library, Cypress)
+                    </p>
+                    <a
+                      href="https://github.com/tomasherrera1910/weatherapp-nextjs"
+                      target="_blank"
+                    >
+                      Github <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://weatherapp-nextjs.vercel.app/"
+                      target="_blank"
+                    >
+                      Visitar Sitio <i class="fa-solid fa-link"></i>
+                    </a>
+                  </section>
+                </div>
+              </article>
+              <!-- EJERCICIOS ADVENTJS -->
+              <article class="flipContainer swiper-slide">
+                <div
+                  class="proyectCard"
+                  style="
+                    --prim-col: rgb(232, 244, 20);
+                    --sec-col: rgba(141, 149, 0, 1);
+                    --text-col: rgb(52, 47, 47);
+                  "
+                >
+                  <section class="frontCard">
+                    <img src="../img/projects/adventjsExercise.png"/
+                    alt="Adventjs exercise">
+                    <section>
+                      <h3>SOLUCIÓN 25 RETOS CON JAVASCRIPT</h3>
+                    </section>
+                  </section>
+                  <section class="reverseCard">
+                    <p>
+                      Adventjs es una página de retos de JS propuesta por
+                      Midudev. Acá podes ver mi solución a todos los retos
+                    </p>
+                    <a
+                      href="https://github.com/tomasherrera1910/adventjs-retos"
+                      target="_blank"
+                    >
+                      Mi solución <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://adventjs.dev" target="_blank">
+                      Visitar Sitio <i class="fa-solid fa-link"></i>
+                    </a>
+                  </section>
+                </div>
+              </article>
+              <!-- MI PRIMER PROYECTO REACT (con api de rick y morty) -->
+              <article class="flipContainer swiper-slide">
+                <div
+                  class="proyectCard"
+                  style="
+                    --prim-col: rgb(232, 244, 20);
+                    --sec-col: rgb(23, 104, 55);
+                    --text-col: rgb(52, 47, 47);
+                  "
+                >
+                  <section class="frontCard">
+                    <img src="../img/projects/rickMortyReact.png"/ alt="Rick y
+                    Morty">
+                    <section>
+                      <h3>RICK Y MORTY</h3>
+                    </section>
+                  </section>
+                  <section class="reverseCard">
+                    <p>
+                      Este fue mi primer proyecto en React en 2021, usando la
+                      API de Rick y Morty
+                    </p>
+                    <a
+                      href="https://github.com/tomasherrera1910/rickymorty-react"
+                      target="_blank"
+                    >
+                      Github <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://arcane-headland-94010.herokuapp.com/?page=1"
+                      target="_blank"
+                    >
+                      Visitar Sitio <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://rickandmortyapi.com/api/character"
+                      target="_blank"
+                    >
+                      API <i class="fa-solid fa-paperclip"></i>
+                    </a>
+                  </section>
+                </div>
+              </article>
             </div>
-        </section>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SECCIÓN CONTACTO -->
+      <section id="contacto" class="contactView">
+        <div class="contactContainer">
+          <h1 class="title">Contáctame</h1>
+          <form action="https://formspree.io/f/meqdqkeq" method="POST">
+            <section>
+              <input
+                placeholder="Nombre..."
+                type="text"
+                required
+                name="nombre"
+              />
+              <input
+                placeholder="Mail de contacto..."
+                type="email"
+                required
+                name="email"
+              />
+            </section>
+            <input placeholder="Asunto..." type="text" required name="asunto" />
+            <textarea
+              placeholder="Mensaje..."
+              required
+              name="mensaje"
+            ></textarea>
+            <button>
+              Enviar <span><i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+          </form>
+        </div>
+      </section>
     </div>
-    
-</body>
+  </body>
 </html>
