@@ -1,10 +1,11 @@
 :root {
+    --bg-dark: #999;
     --bg-color: #eee;
     --bg-secondary-color: #aaa;
     --text-color: #111;
     --text-gradient: #444;
     --navbar-bg: rgba(0, 0, 0, 0.8);
-    --blue-color: rgb(55, 55, 219);
+    --blue-color: rgb(55, 140, 219);
     --blue-shadow: 1px 1px 8px rgb(55, 55, 219);
     --bg-button-theme: url("../img/background-space.jpg");
     --dark-mode: 0;
@@ -44,12 +45,18 @@ textarea{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.subtitleAboutMe{
+    font-size: 2rem;
+}
 .subtitle{
-  font-size: 2rem;
   margin:0 0 8px 0;
-  background: -webkit-linear-gradient(rgb(7, 7, 87), rgb(55, 55, 219));
+  background: -webkit-linear-gradient(var(--blue-color), rgb(55, 55, 219));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.subtitle:not(.subtitleAboutMe){
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 .contactView, .projectsView, .skillsView, .homeContainer{
     padding-top: 4.5em;
@@ -110,55 +117,6 @@ textarea{
     margin:8px 0;
 }
 
-.contactContainer{
-    margin-top: 2em;
-    box-shadow: var(--box-small-shadow);
-    text-align: center;
-    border-radius: 1em;
-    width: 600px;
-    max-width: 85%;
-    padding: 1em 2.5em;
-}
-.contactContainer form section{
-    display: flex;
-    gap:1em;
-}
-.contactContainer input, .contactContainer textarea{
-    display: block;
-    width:100%;
-    margin-bottom: 1em;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border:none;
-    border-bottom: 1.5px solid var(--text-color);
-    outline:none;
-    padding: 0.5em 0.2em;
-    transition: ease-in-out .5s;
-}
-.contactContainer textarea{
-    min-height: 100px;
-}
-.contactContainer input:focus, .contactContainer textarea:focus{
-    transition: ease-in-out .3s;
-    border-bottom: 1.5px solid var(--blue-color);
-}
-.contactContainer button{
-    padding: 0;
-    width:100%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-.contactContainer button:hover{
-    transition: ease-in-out .3s;
-    background-color: var(--bg-color);
-    color:var(--text-color);
-    border: 1px solid var(--text-color);
-}
-
-
 @media(max-width: 805px){
     .title{
         font-size: 2.5rem;
@@ -215,11 +173,18 @@ textarea{
 @media(max-width: 425px){
     .aboutMe{
         padding: 0 0.4em;
-        font-size: .60rem;
+        font-size: .75rem;
         text-align: center;
     }
 }
 @media(max-width: 350px){
+    .subtitle:not(.subtitleAboutMe){
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    .title{
+        line-height: 1.1;
+    }
     .homeContainer img{
         width: 150px;
         height: 150px;

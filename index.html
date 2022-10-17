@@ -8,8 +8,9 @@
     <!-- mis hojas de estilos -->
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="styles/proyectos.css" />
     <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/proyectos.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/swiper.css" />
     <!-- iconos font awesome cdn -->
     <link
@@ -80,7 +81,7 @@
         <img src="img/foto-dia.jpg" alt="Mi imagen" id="foto" />
         <div>
           <h1 class="title">¡Hola, soy Tomás Herrera!</h1>
-          <h2 class="subtitle">Desarrollador Fullstack Jr.</h2>
+          <h2 class="subtitle subtitleAboutMe">Desarrollador Fullstack Jr.</h2>
           <div class="socialsButtonsContainer">
             <a href="https://github.com/tomasherrera1910" target="_blank"
               >Github <i class="fa-brands fa-github"></i
@@ -110,7 +111,7 @@
       </section>
       <!-- SECCIÓN SKILLS -->
       <section id="skills" class="skillsView">
-        <h1 class="title">Habilidades</h1>
+        <h3 class="subtitle">Habilidades</h3>
         <div class="skillsBox">
           <header class="skillsNavbar">
             <nav>
@@ -276,7 +277,7 @@
       </section>
       <!-- SECCIÓN PROYECTOS -->
       <section id="proyectos" class="projectsView">
-        <h1 class="title">Mis Proyectos</h1>
+        <h3 class="subtitle">Mis Proyectos</h3>
         <div class="proyectosContainer">
           <!-- Slider main container -->
           <div class="swiper">
@@ -492,32 +493,48 @@
       <!-- SECCIÓN CONTACTO -->
       <section id="contacto" class="contactView">
         <div class="contactContainer">
-          <h1 class="title">Contáctame</h1>
-          <form action="https://formspree.io/f/meqdqkeq" method="POST">
-            <section>
+          <section class="leftSection">
+            <h3 class="subtitle">Contactame</h3>
+            <form action="https://formspree.io/f/meqdqkeq" method="POST">
+              <section>
+                <input
+                  placeholder="Nombre..."
+                  type="text"
+                  required
+                  name="nombre"
+                />
+                <input
+                  placeholder="Mail de contacto..."
+                  type="email"
+                  required
+                  name="email"
+                />
+              </section>
               <input
-                placeholder="Nombre..."
+                placeholder="Asunto..."
                 type="text"
                 required
-                name="nombre"
+                name="asunto"
               />
-              <input
-                placeholder="Mail de contacto..."
-                type="email"
+              <textarea
+                placeholder="Mensaje..."
                 required
-                name="email"
-              />
-            </section>
-            <input placeholder="Asunto..." type="text" required name="asunto" />
-            <textarea
-              placeholder="Mensaje..."
-              required
-              name="mensaje"
-            ></textarea>
-            <button>
-              Enviar <span><i class="fa-solid fa-paper-plane"></i></span>
-            </button>
-          </form>
+                name="mensaje"
+              ></textarea>
+              <button>
+                Enviar <span><i class="fa-solid fa-paper-plane"></i></span>
+              </button>
+            </form>
+          </section>
+          <section class="rightSection">
+            <span
+              ><i class="fa-solid fa-location-dot"></i> Mendoza, Argentina</span
+            >
+            <span
+              ><i class="fa-solid fa-envelope"></i> tomymza10@gmail.com</span
+            >
+            <span><i class="fa-solid fa-phone"></i> +54 9 261 711-6355</span>
+          </section>
         </div>
       </section>
     </div>

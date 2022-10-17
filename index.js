@@ -4,6 +4,7 @@ function lightMode(body) {
 
   //cambiamos las variables de css
   body.style.setProperty("--bg-color", "#eee")
+  body.style.setProperty("--bg-dark", "#999")
   body.style.setProperty("--bg-secondary-color", "#aaa")
   body.style.setProperty("--navbar-bg", "rgba(0, 0, 0, 0.8)")
   body.style.setProperty("--text-color", "#111")
@@ -22,6 +23,7 @@ function darkMode(body) {
 
   //cambiamos las variables de css
   body.style.setProperty("--bg-color", "#222")
+  body.style.setProperty("--bg-dark", "#111")
   body.style.setProperty("--bg-secondary-color", "#555")
   body.style.setProperty("--navbar-bg", "rgba(255, 255, 255, 0.8)")
   body.style.setProperty("--text-color", "#fff")
@@ -113,23 +115,33 @@ function setImgUtnProject() {
 }
 setImgUtnProject()
 addEventListener("scroll", () => {
-  const homeHeight = document.getElementById("inicio").scrollHeight - 25
+  const homeHeight = document.getElementById("inicio").clientHeight
   const skillsHeight =
-    document.getElementById("skills").scrollHeight + homeHeight - 25
+    document.getElementById("skills").clientHeight + homeHeight
   const proyectosHeight =
-    document.getElementById("proyectos").scrollHeight + skillsHeight - 25
-  // const contactoHeight = document.getElementById("contacto").scrollHeight
-
-  const scrollable = window.scrollY
-  console.log(scrollable)
+    document.getElementById("proyectos").clientHeight + skillsHeight
+  // const contactoHeight =
+  //   document.getElementById("contacto").clientHeight + proyectosHeight
+  const scrollable =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight
+  const scroll = Math.round(window.scrollY)
   const page =
-    scrollable < homeHeight
-      ? 1
-      : scrollable >= homeHeight && scrollable < skillsHeight
-      ? 2
-      : scrollable >= skillsHeight && scrollable < proyectosHeight
+    scroll === scrollable || scroll > proyectosHeight
+      ? 4
+      : scroll >= skillsHeight / 1.02 && scroll < proyectosHeight
       ? 3
-      : 4
+      : scroll >= homeHeight / 1.3 && scroll < skillsHeight
+      ? 2
+      : 1
+  // const page =
+  //   scroll < homeHeight
+  //     ? 1
+  //     : scroll >= homeHeight && scroll < skillsHeight
+  //     ? 2
+  //     : scroll >= skillsHeight && scroll < proyectosHeight
+  //     ? 3
+  //     : 4
 
   if (page === 1) {
     activeLinkNavbar("inicioLink")
