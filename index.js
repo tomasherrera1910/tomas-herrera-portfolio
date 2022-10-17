@@ -113,16 +113,31 @@ function setImgUtnProject() {
 }
 setImgUtnProject()
 addEventListener("scroll", () => {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight
-  const pageHeight = scrollable / 4
-  const scroll = Math.round(window.scrollY)
-  if (scroll <= pageHeight) {
+  const homeHeight = document.getElementById("inicio").scrollHeight - 25
+  const skillsHeight =
+    document.getElementById("skills").scrollHeight + homeHeight - 25
+  const proyectosHeight =
+    document.getElementById("proyectos").scrollHeight + skillsHeight - 25
+  // const contactoHeight = document.getElementById("contacto").scrollHeight
+
+  const scrollable = window.scrollY
+  console.log(scrollable)
+  const page =
+    scrollable < homeHeight
+      ? 1
+      : scrollable >= homeHeight && scrollable < skillsHeight
+      ? 2
+      : scrollable >= skillsHeight && scrollable < proyectosHeight
+      ? 3
+      : 4
+
+  if (page === 1) {
     activeLinkNavbar("inicioLink")
-  } else if (scroll > pageHeight && scroll <= pageHeight * 2) {
+  } else if (page === 2) {
     activeLinkNavbar("skillsLink")
-  } else if (scroll > pageHeight * 2 && scroll <= pageHeight * 3) {
+  } else if (page === 3) {
     activeLinkNavbar("proyectosLink")
-  } else {
+  } else if (page === 4) {
     activeLinkNavbar("contactoLink")
   }
 })

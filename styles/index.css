@@ -64,6 +64,7 @@ textarea{
     padding-bottom: 4em;
 }
 .homeContainer{
+    height: 100vh;
     flex-direction: row;
     gap:2em;
 }
@@ -209,6 +210,13 @@ textarea{
     }
     .socialsButtonsContainer a{
         font-size: .75rem;
+    }
+}
+@media(max-width: 425px){
+    .aboutMe{
+        padding: 0 0.4em;
+        font-size: .60rem;
+        text-align: center;
     }
 }
 @media(max-width: 350px){
