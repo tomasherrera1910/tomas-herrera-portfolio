@@ -114,7 +114,11 @@ textarea{
 .aboutMe{
     max-width: 400px;
     font-size: 1rem;
+    font-weight: 300;
     margin:8px 0;
+}
+.aboutMe a{
+    color: var(--blue-color);
 }
 
 @media(max-width: 805px){

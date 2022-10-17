@@ -107,13 +107,6 @@ function navigateHandler(active) {
   toggleHandler()
   activeLinkNavbar(active)
 }
-function setImgUtnProject() {
-  const viewWidth = window.innerWidth
-  const imageElement = document.getElementById("utn-project")
-  if (viewWidth >= 500)
-    imageElement.setAttribute("src", "../img/projects/ElBuenSaborFactura.png")
-}
-setImgUtnProject()
 addEventListener("scroll", () => {
   const homeHeight = document.getElementById("inicio").clientHeight
   const skillsHeight =
@@ -157,6 +150,10 @@ const swiper = new Swiper(".swiper", {
   // Default parameters
   breakpoints: {
     // when window width is >= 500px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
     500: {
       slidesPerView: 3,
       spaceBetween: 20,
