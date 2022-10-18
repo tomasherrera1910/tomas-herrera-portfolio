@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #999;
+    --bg-dark: rgba(222, 222, 222, .5);
     --bg-color: #eee;
     --bg-secondary-color: #aaa;
     --text-color: #111;
@@ -180,9 +180,12 @@ textarea{
         font-size: .75rem;
         text-align: center;
     }
-    .contactView, .projectsView, .skillsView, .homeContainer{
+    .contactView, .projectsView, .homeContainer{
         padding-top: 3em;
     }
+    .skillsView{
+        padding: 0;
+    } 
 }
 @media(max-width: 350px){
     .subtitle:not(.subtitleAboutMe){

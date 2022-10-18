@@ -4,7 +4,7 @@ function lightMode(body) {
 
   //cambiamos las variables de css
   body.style.setProperty("--bg-color", "#eee")
-  body.style.setProperty("--bg-dark", "#999")
+  body.style.setProperty("--bg-dark", "rgba(222, 222, 222, .5)")
   body.style.setProperty("--bg-secondary-color", "#aaa")
   body.style.setProperty("--navbar-bg", "rgba(0, 0, 0, 0.8)")
   body.style.setProperty("--text-color", "#111")
@@ -23,7 +23,7 @@ function darkMode(body) {
 
   //cambiamos las variables de css
   body.style.setProperty("--bg-color", "#222")
-  body.style.setProperty("--bg-dark", "#111")
+  body.style.setProperty("--bg-dark", "rgba(23, 23, 23, .5)")
   body.style.setProperty("--bg-secondary-color", "#555")
   body.style.setProperty("--navbar-bg", "rgba(255, 255, 255, 0.8)")
   body.style.setProperty("--text-color", "#fff")
@@ -122,7 +122,7 @@ addEventListener("scroll", () => {
   const page =
     scroll === scrollable || scroll > proyectosHeight
       ? 4
-      : scroll >= skillsHeight / 1.02 && scroll < proyectosHeight
+      : scroll >= skillsHeight / 1.1 && scroll < proyectosHeight
       ? 3
       : scroll >= homeHeight / 1.3 && scroll < skillsHeight
       ? 2
