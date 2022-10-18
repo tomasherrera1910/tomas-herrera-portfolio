@@ -124,7 +124,7 @@
 }
 @media(max-width: 340px){
     .skillsNavbar button{
-        font-size: .60rem;
+        font-size: .70rem;
         height: 30px;
     }
     .skillsDisplay div h3{
@@ -137,7 +137,4 @@
     .skillsDisplay a{
         font-size: .50rem;
     }
-}
-@media(min-width: 1430px){
-    
 }

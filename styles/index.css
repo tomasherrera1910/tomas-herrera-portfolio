@@ -174,11 +174,14 @@ textarea{
         font-size: .75rem;
     }
 }
-@media(max-width: 425px){
+@media(max-width: 426px){
     .aboutMe{
         padding: 0 0.4em;
         font-size: .75rem;
         text-align: center;
+    }
+    .contactView, .projectsView, .skillsView, .homeContainer{
+        padding-top: 3em;
     }
 }
 @media(max-width: 350px){

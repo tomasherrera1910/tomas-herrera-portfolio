@@ -155,4 +155,16 @@
     .toggleButton{
         line-height: 3em;
     }
+    .switchTheme{
+        font-size: 12px;
+    }
+    .switchTheme::after{
+        width:20px;
+        height:20px;
+    }
+    .switchTheme span{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
 }
